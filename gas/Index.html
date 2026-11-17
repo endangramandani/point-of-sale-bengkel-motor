@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>BENGKEL MOTOR — Point of Sale &amp; Workshop Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <?!= include('Styles'); ?>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="toast-container"></div>
+  <div id="modal-root"></div>
+  <script>
+    // Bridge Google Apps Script google.script.run ke Promise modern
+    function gasCall(fnName) {
+      var args = Array.prototype.slice.call(arguments, 1);
+      return new Promise(function (resolve, reject) {
+        google.script.run
+          .withSuccessHandler(resolve)
+          .withFailureHandler(function (err) { reject(new Error(err.message || String(err))); })
+          [fnName].apply(null, args);
+      });
+    }
+  </script>
+  <?!= include('Scripts'); ?>
+</body>
+</html>

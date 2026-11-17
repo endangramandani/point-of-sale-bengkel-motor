@@ -1,0 +1,6 @@
+{
+  "name": "BENGKEL MOTOR",
+  "description": "Sistem Informasi Manajemen & Point of Sale (POS) Bengkel Sepeda Motor Terintegrasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
